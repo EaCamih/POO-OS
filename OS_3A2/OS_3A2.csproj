@@ -47,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\BLL_Tecnico.cs" />
+    <Compile Include="BLL\BLL_Usuario.cs" />
     <Compile Include="DAL\ConexaoBD.cs" />
     <Compile Include="DTO\Tecnico.cs" />
     <Compile Include="DTO\Usuario.cs" />
@@ -79,9 +81,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DLL\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
