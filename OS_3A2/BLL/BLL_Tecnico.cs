@@ -13,6 +13,45 @@ namespace OS_3A2.BLL
     {
         ConexaoBD bd = new ConexaoBD();
 
+        public void Inserir_Tecnico(DTO_Tecnico tecnico)
+        {
+            try
+            {
+                string sql = string.Format("Insert into tecnico values(null, '{1}', '{2}')", tecnico.Nome, tecnico.Espec_id);
+                bd.AlterarTabela(sql);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void Alterar_Tecnico(DTO_Tecnico tecnico)
+        {
+            try
+            {
+                string sql = string.Format("Update tecnico set nome = '{0]', especialidade = '{1}'", tecnico.Nome, tecnico.Espec_id);
+                bd.AlterarTabela(sql);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void Excluir_Tecnico(DTO_Tecnico tecnico)
+        {
+            try
+            {
+                string sql = string.Format("Delete from tecnico where id = '{0}'", tecnico.Id);
+                bd.AlterarTabela(sql);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public DataTable ConsultarTabela()
         {
             try
