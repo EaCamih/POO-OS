@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace OS_3A2
 {
-    public partial class Form1 : Form
+    public partial class Tecnico : Form
     {
-        public Form1()
+        public Tecnico()
         {
             InitializeComponent();
-        }
-
-        private void usuárioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

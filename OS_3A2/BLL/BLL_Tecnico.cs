@@ -56,7 +56,7 @@ namespace OS_3A2.BLL
         {
             try
             {
-                return bd.ConsultarTabelas("Select * from setor");
+                return bd.ConsultarTabelas("Select * from tecnico");
             }
             catch (Exception ex)
             {
