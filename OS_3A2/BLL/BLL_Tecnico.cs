@@ -17,7 +17,7 @@ namespace OS_3A2.BLL
         {
             try
             {
-                string sql = string.Format("Insert into tecnico values(null, '{1}', '{2}')", tecnico.Nome, tecnico.Espec_id);
+                string sql = string.Format("Insert into tecnico values(null, '{1}', '{2}', {3}, {4},)", tecnico.Nome, tecnico.Email, tecnico.Senha, tecnico.Espec_id);
                 bd.AlterarTabela(sql);
             }
             catch (Exception ex)
@@ -30,7 +30,7 @@ namespace OS_3A2.BLL
         {
             try
             {
-                string sql = string.Format("Update tecnico set nome = '{0]', especialidade = '{1}'", tecnico.Nome, tecnico.Espec_id);
+                string sql = string.Format("Update tecnico set nome = '{0]', especialidade = '{1}', email = '{2}', senha = '{3}',", tecnico.Nome, tecnico.Espec_id, tecnico.Email, tecnico.Senha);
                 bd.AlterarTabela(sql);
             }
             catch (Exception ex)

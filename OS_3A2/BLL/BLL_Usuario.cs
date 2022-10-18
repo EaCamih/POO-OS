@@ -18,7 +18,7 @@ namespace OS_3A2.BLL
         {
             try
             {
-                string sql = string.Format("Insert into usuario values(null, '{0}','{1}','{2}','{3},')", usuario.Nome, usuario.Email, usuario.Telefone, usuario.Id_setor);
+                string sql = string.Format("Insert into usuario values(null, '{0}','{1}','{2}','{3}, {4},')", usuario.Nome, usuario.Email, usuario.Senha, usuario.Telefone, usuario.Id_setor);
                 bd.AlterarTabela(sql);
             }
             catch (Exception ex)
@@ -31,7 +31,7 @@ namespace OS_3A2.BLL
         {
             try
             {
-                string sql = string.Format("Update usuario set nome = '{0]', email = '{1}', telefone = '{2}', setor = '{3}', where id = '{4}'", usuario.Nome, usuario.Email, usuario.Telefone, usuario.Id_setor, usuario.Id);
+                string sql = string.Format("Update usuario set nome = '{0]', email = '{1}', telefone = '{2}', setor = '{3}', where id = '{4}', senha = '{5}'", usuario.Nome, usuario.Email, usuario.Telefone, usuario.Id_setor, usuario.Id, usuario.Senha);
                 bd.AlterarTabela(sql);
             }
             catch (Exception ex)
