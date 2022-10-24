@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using OS_3A2.BLL;
 
 namespace OS_3A2
 {
@@ -15,6 +9,29 @@ namespace OS_3A2
         public Login()
         {
             InitializeComponent();
+        }
+        BLL_Login login = new BLL_Login();
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(login.Login(txtEmail.Text, txtSenha.Text) == "")
+            {
+                MessageBox.Show("Usuário ou senha inválidos");
+            }else if(login.Login(txtEmail.Text, txtSenha.Text) == "Usuario")
+            {
+                OS_Usuario usuario = new OS_Usuario();
+                usuario.ShowDialog();
+            }
+            else if (login.Login(txtEmail.Text, txtSenha.Text) == "Tecnico")
+            {
+                OS_Tecnicos tecnico = new OS_Tecnicos();
+                tecnico.ShowDialog();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

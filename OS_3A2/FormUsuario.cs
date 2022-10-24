@@ -21,6 +21,7 @@ namespace OS_3A2
         }
 
         BLL_Usuario objbll_usuario = new BLL_Usuario();
+        BLL_Setor objbll_Setor = new BLL_Setor();
         DTO_Usuario objdto_usuario = new DTO_Usuario();
 
 
@@ -37,22 +38,36 @@ namespace OS_3A2
         {
             try
             {
-
+                cbxSetor.DataSource = objbll_Setor.Consultar_Tabela();
+                cbxSetor.DisplayMember = "descricao";
+                cbxSetor.ValueMember = "id";
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
-
-
-
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void frmUsuario_Load(object sender, EventArgs e)
         {
-
+            CarregarGrid();
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                objdto_usuario.Nome = txtNome.Text;
+                objdto_usuario.Telefone = txtTelefone.Text;
+                objdto_usuario.Email = txtEmail.Text;
+                objdto_usuario.Id_setor = int.Parse(cbxSetor.SelectedValue.ToString());
+                objbll_usuario.Inserir_Usuario(objdto_usuario);
+                MessageBox.Show("Usario inserido com sucesso");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -69,6 +84,21 @@ namespace OS_3A2
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+
+
+
+
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtID_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

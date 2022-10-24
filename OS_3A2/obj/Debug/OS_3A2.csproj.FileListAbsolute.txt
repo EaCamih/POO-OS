@@ -1,0 +1,11 @@
+H:\POO\3 Etapa\Atividades\OS_3A2\OS_3A2\obj\Debug\OS_3A2.csproj.AssemblyReference.cache
+H:\POO\3 Etapa\Atividades\OS_3A2\OS_3A2\obj\Debug\OS_3A2.csproj.SuggestedBindingRedirects.cache
+H:\POO\3 Etapa\Atividades\OS_3A2\OS_3A2\obj\Debug\OS_3A2.exe.config
+H:\POO\3 Etapa\Atividades\OS_3A2\OS_3A2\obj\Debug\OS_3A2.Form1.resources
+H:\POO\3 Etapa\Atividades\OS_3A2\OS_3A2\obj\Debug\OS_3A2.FormUsuario.resources
+H:\POO\3 Etapa\Atividades\OS_3A2\OS_3A2\obj\Debug\OS_3A2.Login.resources
+H:\POO\3 Etapa\Atividades\OS_3A2\OS_3A2\obj\Debug\OS_3A2.OS_Tecnicos.resources
+H:\POO\3 Etapa\Atividades\OS_3A2\OS_3A2\obj\Debug\OS_3A2.Properties.Resources.resources
+H:\POO\3 Etapa\Atividades\OS_3A2\OS_3A2\obj\Debug\OS_3A2.OS_Usuario.resources
+H:\POO\3 Etapa\Atividades\OS_3A2\OS_3A2\obj\Debug\OS_3A2.csproj.GenerateResource.cache
+H:\POO\3 Etapa\Atividades\OS_3A2\OS_3A2\obj\Debug\OS_3A2.csproj.CoreCompileInputs.cache

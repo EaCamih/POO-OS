@@ -48,6 +48,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\BLL_Especialidade.cs" />
+    <Compile Include="BLL\BLL_Login.cs" />
+    <Compile Include="BLL\BLL_Setor.cs" />
     <Compile Include="BLL\BLL_Tecnico.cs" />
     <Compile Include="BLL\BLL_Usuario.cs" />
     <Compile Include="DAL\ConexaoBD.cs" />
