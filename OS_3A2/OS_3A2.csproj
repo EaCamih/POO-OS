@@ -49,10 +49,12 @@
   <ItemGroup>
     <Compile Include="BLL\BLL_Especialidade.cs" />
     <Compile Include="BLL\BLL_Login.cs" />
+    <Compile Include="BLL\BLL_OS.cs" />
     <Compile Include="BLL\BLL_Setor.cs" />
     <Compile Include="BLL\BLL_Tecnico.cs" />
     <Compile Include="BLL\BLL_Usuario.cs" />
     <Compile Include="DAL\ConexaoBD.cs" />
+    <Compile Include="DTO\DTO_OS.cs" />
     <Compile Include="DTO\Tecnico.cs" />
     <Compile Include="DTO\Usuario.cs" />
     <Compile Include="Form1.cs">

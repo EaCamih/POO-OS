@@ -75,6 +75,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Criar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -84,6 +85,7 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "Listar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -93,6 +95,7 @@
             this.button3.TabIndex = 6;
             this.button3.Text = "Sair";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // dataGridView1
             // 
@@ -126,7 +129,7 @@
             this.cbTecnico.Size = new System.Drawing.Size(121, 21);
             this.cbTecnico.TabIndex = 11;
             // 
-            // Usuario
+            // OS_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -141,7 +144,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtDesc);
-            this.Name = "Usuario";
+            this.Name = "OS_Usuario";
             this.Text = "Usuario";
             this.Load += new System.EventHandler(this.Usuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

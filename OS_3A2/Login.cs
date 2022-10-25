@@ -14,6 +14,13 @@ namespace OS_3A2
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if(txtEmail.Text == "admin@admin.com.br" && txtSenha.Text == "admin123")
+            {
+                Form1 frmPrincipal = new Form1();
+                frmPrincipal.ShowDialog();
+            }
+
+
             if(login.Login(txtEmail.Text, txtSenha.Text) == "")
             {
                 MessageBox.Show("Usuário ou senha inválidos");

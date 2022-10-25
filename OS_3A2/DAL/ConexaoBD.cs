@@ -65,7 +65,7 @@ namespace OS_3A2.DAL
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                throw ex;
             }
             finally
             {

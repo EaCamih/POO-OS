@@ -21,6 +21,9 @@ namespace OS_3A2.BLL
 
             if(dt.Rows.Count > 0)
             {
+                nome_usuario = dt.Rows[0]["nome"].ToString();
+                id_usuario = int.Parse(dt.Rows[0]["id"].ToString());
+                tipo_usuario = "Usuario";
                 return "Usuario";
             }
 
@@ -29,10 +32,28 @@ namespace OS_3A2.BLL
 
             if(dt.Rows.Count > 0)
             {
+                nome_usuario = dt.Rows[0]["nome"].ToString();
+                id_usuario = int.Parse(dt.Rows[0]["id"].ToString());
+                tipo_usuario = "Tecnico";
                 return "Tecnico";
             }
 
             return "";
+        }
+
+        public string Tipo_Usuario()
+        {
+            return tipo_usuario;
+        }
+
+        public string Nome_Usuario()
+        {
+            return nome_usuario;
+        }
+
+        public int ID_Usuario()
+        {
+            return id_usuario;
         }
     }
 }
