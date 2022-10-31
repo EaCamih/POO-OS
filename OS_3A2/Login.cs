@@ -26,7 +26,7 @@ namespace OS_3A2
                 MessageBox.Show("Usuário ou senha inválidos");
             }else if(login.Login(txtEmail.Text, txtSenha.Text) == "Usuario")
             {
-                OS_Usuario usuario = new OS_Usuario();
+                FormUsuario usuario = new FormUsuario();
                 usuario.ShowDialog();
             }
             else if (login.Login(txtEmail.Text, txtSenha.Text) == "Tecnico")

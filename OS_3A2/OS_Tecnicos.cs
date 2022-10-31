@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
+using OS_3A2.BLL;
+using OS_3A2.DTO;
 
 namespace OS_3A2
 {
@@ -16,6 +12,10 @@ namespace OS_3A2
         {
             InitializeComponent();
         }
+
+        BLL_Tecnico objbll_tecnico = new BLL_Tecnico();
+        BLL_Especialidade objbll_especialidade = new BLL_Especialidade();
+        DTO_Tecnico objdto_tecnico = new DTO_Tecnico();
 
         private void OS_Tecnicos_Load(object sender, EventArgs e)
         {

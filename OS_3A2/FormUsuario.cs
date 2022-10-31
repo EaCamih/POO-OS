@@ -100,5 +100,10 @@ namespace OS_3A2
         {
 
         }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
