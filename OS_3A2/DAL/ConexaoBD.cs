@@ -7,14 +7,14 @@ namespace OS_3A2.DAL
     internal class ConexaoBD
     {
         //Lembrete: Alterar o nome do banco de dados=.
-        private string string_conexao = "persist security info = false; server=localhost; database=OS_3A2; uid=root; pwd=;";
+        private string string_conexao = "persist security info = false; server=localhost; database=OS_3A2; uid=root; pwd=; SslMode=none";
         private MySqlConnection conexao;
 
         public void Conectar()
         {
             try
             {
-                conexao = new MySqlConnection();
+                conexao = new MySqlConnection(string_conexao);
                 conexao.Open();
             }
             catch(MySqlException ex)
