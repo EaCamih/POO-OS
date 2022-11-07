@@ -19,7 +19,14 @@ namespace OS_3A2
 
         private void usuárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            FormUsuario usuario = new FormUsuario();
+            usuario.ShowDialog();
+        }
 
+        private void técnicoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Tecnico tecnico = new Tecnico();
+            tecnico.ShowDialog();
         }
     }
 }

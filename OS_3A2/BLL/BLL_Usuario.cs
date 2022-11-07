@@ -57,7 +57,7 @@ namespace OS_3A2.BLL
         {
             try
             {
-                string sql = string.Format("Select * from usuario");
+                string sql = string.Format("select * from usuario");
                 return bd.ConsultarTabelas(sql);
             }
             catch (Exception ex)

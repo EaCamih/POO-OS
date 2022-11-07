@@ -41,3 +41,8 @@ insert into setor values (null,'Setor2');
 insert into setor values (null,'Setor3');
 
 select * from tecnico;
+select * from usuario;
+select * from especialidade;
+select * from setor;
+
+select * from OS;

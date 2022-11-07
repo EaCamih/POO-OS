@@ -28,13 +28,14 @@ namespace OS_3A2
         {
             MessageBox.Show("Bem vindo " + bll_login.Nome_Usuario());
             CarregarTecnico();
+            Listar_Os();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             dto_os.Descricao = txtDesc.Text;
             dto_os.Status = "EM ABERTO";
-            dto_os.Tecnico = int.Parse(cbTecnico.ValueMember.ToString());
+            dto_os.Tecnico = int.Parse(cbTecnico.DisplayMember.ToString());
             dto_os.Usuario = bll_login.ID_Usuario();
             bll_os.Criar_OS(dto_os);
             MessageBox.Show("OS Criada com sucesso.");

@@ -70,6 +70,7 @@
             this.técnicoToolStripMenuItem.Name = "técnicoToolStripMenuItem";
             this.técnicoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.técnicoToolStripMenuItem.Text = "Técnico";
+            this.técnicoToolStripMenuItem.Click += new System.EventHandler(this.técnicoToolStripMenuItem_Click);
             // 
             // Form1
             // 

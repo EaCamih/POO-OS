@@ -54,7 +54,7 @@ namespace OS_3A2.BLL
         {
             try
             {
-                sql = string.Format("select * from os");
+                sql = string.Format("select * from OS");
                 return bd.ConsultarTabelas(sql);
             }
             catch (Exception ex)

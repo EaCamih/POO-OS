@@ -56,7 +56,8 @@ namespace OS_3A2.BLL
         {
             try
             {
-                return bd.ConsultarTabelas("Select * from tecnico");
+                string sql = "select * from tecnico";
+                return bd.ConsultarTabelas(sql);
             }
             catch (Exception ex)
             {

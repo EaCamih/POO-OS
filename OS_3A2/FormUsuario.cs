@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using OS_3A2.DAL;
 using OS_3A2.BLL;
@@ -21,7 +15,7 @@ namespace OS_3A2
         }
 
         BLL_Usuario objbll_usuario = new BLL_Usuario();
-        BLL_Setor objbll_Setor = new BLL_Setor();
+        BLL_Setor objbll_setor = new BLL_Setor();
         DTO_Usuario objdto_usuario = new DTO_Usuario();
 
 
@@ -34,23 +28,24 @@ namespace OS_3A2
             cbxSetor.SelectedValue = -1;
         }
 
+        private void frmUsuario_Load(object sender, EventArgs e)
+        {
+            CarregarGrid();
+        }
+
         public void CarregarGrid()
         {
             try
             {
-                cbxSetor.DataSource = objbll_Setor.Consultar_Tabela();
+                cbxSetor.DataSource = objbll_setor.Consultar_Tabela();
                 cbxSetor.DisplayMember = "descricao";
                 cbxSetor.ValueMember = "id";
+                dataGridView1.DataSource = objbll_usuario.Consultar_Tabela();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void frmUsuario_Load(object sender, EventArgs e)
-        {
-            CarregarGrid();
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -85,11 +80,6 @@ namespace OS_3A2
                 MessageBox.Show(ex.Message);
             }
         }
-
-
-
-
-
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
