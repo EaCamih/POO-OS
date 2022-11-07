@@ -35,3 +35,9 @@ create table OS(
     tecnico int null default null,
     usuario int null default null
 );
+
+insert into setor values (null,'Setor1');
+insert into setor values (null,'Setor2');
+insert into setor values (null,'Setor3');
+
+select * from tecnico;
