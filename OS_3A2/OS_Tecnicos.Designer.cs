@@ -76,6 +76,9 @@
             // cbxStatus
             // 
             this.cbxStatus.FormattingEnabled = true;
+            this.cbxStatus.Items.AddRange(new object[] {
+            "EM ABERTO",
+            "CONCLUIDO"});
             this.cbxStatus.Location = new System.Drawing.Point(169, 231);
             this.cbxStatus.Name = "cbxStatus";
             this.cbxStatus.Size = new System.Drawing.Size(121, 21);

@@ -22,10 +22,11 @@ namespace OS_3A2
         public void Limpar()
         {
             txtEmail.Clear();
+            txtSenha.Clear();
             txtID.Clear();
             txtNome.Clear();
             txtTelefone.Clear();
-            cbxSetor.SelectedValue = -1;
+            cbxSetor.SelectedIndex = -1;
         }
 
         private void frmUsuario_Load(object sender, EventArgs e)
@@ -56,8 +57,11 @@ namespace OS_3A2
                 objdto_usuario.Telefone = txtTelefone.Text;
                 objdto_usuario.Email = txtEmail.Text;
                 objdto_usuario.Id_setor = int.Parse(cbxSetor.SelectedValue.ToString());
+                objdto_usuario.Senha = txtSenha.Text;
                 objbll_usuario.Inserir_Usuario(objdto_usuario);
                 MessageBox.Show("Usario inserido com sucesso");
+                Limpar();
+                CarregarGrid();
             }
             catch (Exception ex)
             {
@@ -94,6 +98,17 @@ namespace OS_3A2
         private void btnSair_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void FormUsuario_Load(object sender, EventArgs e)
+        {
+            CarregarGrid();
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            Limpar();
+            CarregarGrid();
         }
     }
 }

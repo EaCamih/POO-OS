@@ -12,7 +12,7 @@ namespace OS_3A2.BLL
         {
             try
             {
-                return bd.ConsultarTabelas("Select * from setor");
+                return bd.ConsultarTabelas("select * from setor");
             }catch (Exception ex)
             {
                 throw ex;

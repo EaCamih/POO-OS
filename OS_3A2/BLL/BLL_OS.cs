@@ -15,7 +15,7 @@ namespace OS_3A2.BLL
         {
             try
             {
-                sql = string.Format("inser into os values(null, '{0}', '{1}', '{2}', '{3}')", os.Descricao, os.Status, os.Tecnico, os.Usuario);
+                sql = string.Format("insert into os values(null,'{0}','{1}','{2}','{3}')", os.Descricao, os.Status, os.Tecnico, os.Usuario);
                 bd.AlterarTabela(sql);
             }
             catch (Exception ex)
@@ -28,7 +28,7 @@ namespace OS_3A2.BLL
         {
             try
             {
-                sql = string.Format("update os set status = '{0}' where id = '{1}'", os.Status, os.Id);
+                sql = string.Format("update os set status_os = '{0}' where id = '{1}'", os.Status, os.Id);
                 bd.AlterarTabela(sql);
             }
             catch (Exception ex)

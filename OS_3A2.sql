@@ -40,6 +40,10 @@ insert into setor values (null,'Setor1');
 insert into setor values (null,'Setor2');
 insert into setor values (null,'Setor3');
 
+insert into especialidade values (null,'Especialidade1');
+insert into especialidade values (null,'Especialidade2');
+insert into especialidade values (null,'Especialidade3');
+
 select * from tecnico;
 select * from usuario;
 select * from especialidade;

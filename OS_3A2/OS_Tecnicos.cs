@@ -18,7 +18,7 @@ namespace OS_3A2
 
         private void OS_Tecnicos_Load(object sender, EventArgs e)
         {
-            
+            CarregarGrid();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -38,6 +38,7 @@ namespace OS_3A2
                 dto_os.Id = int.Parse(txtId.Text);
                 bll_os.Excluir_OS(dto_os);
                 MessageBox.Show("OS Excluída com sucesso");
+                CarregarGrid();
             }
             catch (Exception ex)
             {
@@ -53,11 +54,19 @@ namespace OS_3A2
                 dto_os.Status = cbxStatus.Text;
                 bll_os.Alterar_OS(dto_os);
                 MessageBox.Show("Status alterado com sucesso");
+                CarregarGrid();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void CarregarGrid()
+        {
+            dataGridView1.DataSource = bll_os.Listar_OS();
+            cbxStatus.SelectedIndex = -1;
+            txtId.Clear();
         }
     }
 }

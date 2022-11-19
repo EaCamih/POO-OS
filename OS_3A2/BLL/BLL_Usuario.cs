@@ -18,7 +18,8 @@ namespace OS_3A2.BLL
         {
             try
             {
-                string sql = string.Format("Insert into usuario values(null, '{0}','{1}','{2}','{3}, {4},')", usuario.Nome, usuario.Email, usuario.Senha, usuario.Telefone, usuario.Id_setor);
+                string sql = string.Format("insert into usuario values(null,'{0}','{1}','{2}','{3}','{4}')", 
+                usuario.Nome, usuario.Email, usuario.Senha, usuario.Telefone, usuario.Id_setor);
                 bd.AlterarTabela(sql);
             }
             catch (Exception ex)

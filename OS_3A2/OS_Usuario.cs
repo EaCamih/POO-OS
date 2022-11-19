@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography;
 using System.Windows.Forms;
 using OS_3A2.BLL;
 using OS_3A2.DTO;
@@ -14,14 +15,21 @@ namespace OS_3A2
 
         BLL_Tecnico blltecnico = new BLL_Tecnico();
         BLL_Login bll_login = new BLL_Login();
-        DTO_OS dto_os = new DTO_OS();
         BLL_OS bll_os = new BLL_OS();
+        DTO_OS dto_os = new DTO_OS();
 
         public void CarregarTecnico()
         {
-            cbTecnico.DataSource = blltecnico.ConsultarTabela();
-            cbTecnico.DisplayMember = "nome";
-            cbTecnico.ValueMember = "id";
+            try
+            {
+                cbTecnico.DataSource = blltecnico.ConsultarTabela();
+                cbTecnico.DisplayMember = "nome";
+                cbTecnico.ValueMember = "id";
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void Usuario_Load(object sender, EventArgs e)
@@ -35,7 +43,7 @@ namespace OS_3A2
         {
             dto_os.Descricao = txtDesc.Text;
             dto_os.Status = "EM ABERTO";
-            dto_os.Tecnico = int.Parse(cbTecnico.DisplayMember.ToString());
+            dto_os.Tecnico = int.Parse(cbTecnico.SelectedValue.ToString());
             dto_os.Usuario = bll_login.ID_Usuario();
             bll_os.Criar_OS(dto_os);
             MessageBox.Show("OS Criada com sucesso.");
@@ -51,8 +59,8 @@ namespace OS_3A2
         {
             try
             {
-                dto_os.Usuario = bll_login.ID_Usuario();
-                dataGridView1.DataSource = bll_os.Listar_OS_Usuario(dto_os);
+                OS_Tecnicos tecnico = new OS_Tecnicos();
+                tecnico.ShowDialog();
             }
             catch (Exception ex)
             {

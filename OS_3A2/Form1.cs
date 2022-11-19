@@ -25,7 +25,7 @@ namespace OS_3A2
 
         private void técnicoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Tecnico tecnico = new Tecnico();
+            FormTecnico tecnico = new FormTecnico();
             tecnico.ShowDialog();
         }
     }
